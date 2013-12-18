@@ -1,24 +1,24 @@
-package net.madz.scheduling.simulation.lifecycle;
+package net.imadz.scheduling.simulation.lifecycle;
 
-import net.madz.lifecycle.annotations.Function;
-import net.madz.lifecycle.annotations.Functions;
-import net.madz.lifecycle.annotations.StateMachine;
-import net.madz.lifecycle.annotations.StateSet;
-import net.madz.lifecycle.annotations.TransitionSet;
-import net.madz.lifecycle.annotations.action.ConditionSet;
-import net.madz.lifecycle.annotations.action.Conditional;
-import net.madz.lifecycle.annotations.action.ConditionalTransition;
-import net.madz.lifecycle.annotations.state.End;
-import net.madz.lifecycle.annotations.state.Initial;
-import net.madz.scheduling.simulation.lifecycle.IResourceLifecycle.Conditions.HistoryState;
-import net.madz.scheduling.simulation.lifecycle.IResourceLifecycle.Transitions.Deploy;
-import net.madz.scheduling.simulation.lifecycle.IResourceLifecycle.Transitions.Fail;
-import net.madz.scheduling.simulation.lifecycle.IResourceLifecycle.Transitions.Recover;
-import net.madz.scheduling.simulation.lifecycle.IResourceLifecycle.Transitions.Recycle;
-import net.madz.scheduling.simulation.lifecycle.IResourceLifecycle.Transitions.Release;
-import net.madz.scheduling.simulation.lifecycle.IResourceLifecycle.Transitions.Undeploy;
-import net.madz.scheduling.simulation.lifecycle.IResourceLifecycle.Transitions.Work;
-import net.madz.scheduling.simulation.lifecycle.IResourceLifecycle.Utils.JustUseHistoryState;
+import net.imadz.lifecycle.annotations.Function;
+import net.imadz.lifecycle.annotations.Functions;
+import net.imadz.lifecycle.annotations.StateMachine;
+import net.imadz.lifecycle.annotations.StateSet;
+import net.imadz.lifecycle.annotations.TransitionSet;
+import net.imadz.lifecycle.annotations.action.ConditionSet;
+import net.imadz.lifecycle.annotations.action.Conditional;
+import net.imadz.lifecycle.annotations.action.ConditionalTransition;
+import net.imadz.lifecycle.annotations.state.End;
+import net.imadz.lifecycle.annotations.state.Initial;
+import net.imadz.scheduling.simulation.lifecycle.IResourceLifecycle.Conditions.HistoryState;
+import net.imadz.scheduling.simulation.lifecycle.IResourceLifecycle.Transitions.Deploy;
+import net.imadz.scheduling.simulation.lifecycle.IResourceLifecycle.Transitions.Fail;
+import net.imadz.scheduling.simulation.lifecycle.IResourceLifecycle.Transitions.Recover;
+import net.imadz.scheduling.simulation.lifecycle.IResourceLifecycle.Transitions.Recycle;
+import net.imadz.scheduling.simulation.lifecycle.IResourceLifecycle.Transitions.Release;
+import net.imadz.scheduling.simulation.lifecycle.IResourceLifecycle.Transitions.Undeploy;
+import net.imadz.scheduling.simulation.lifecycle.IResourceLifecycle.Transitions.Work;
+import net.imadz.scheduling.simulation.lifecycle.IResourceLifecycle.Utils.JustUseHistoryState;
 
 @StateMachine
 public interface IResourceLifecycle {

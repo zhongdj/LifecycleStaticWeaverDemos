@@ -1,15 +1,15 @@
-package net.madz.scheduling.simulation.impl;
+package net.imadz.scheduling.simulation.impl;
 
-import net.madz.lifecycle.LifecycleContext;
-import net.madz.lifecycle.annotations.LifecycleMeta;
-import net.madz.lifecycle.annotations.StateIndicator;
-import net.madz.lifecycle.annotations.Transition;
-import net.madz.lifecycle.annotations.action.Condition;
-import net.madz.lifecycle.annotations.callback.PostStateChange;
-import net.madz.lifecycle.annotations.state.Converter;
-import net.madz.scheduling.simulation.IResource;
-import net.madz.scheduling.simulation.Id;
-import net.madz.scheduling.simulation.lifecycle.IResourceLifecycle;
+import net.imadz.lifecycle.LifecycleContext;
+import net.imadz.lifecycle.annotations.LifecycleMeta;
+import net.imadz.lifecycle.annotations.StateIndicator;
+import net.imadz.lifecycle.annotations.Transition;
+import net.imadz.lifecycle.annotations.action.Condition;
+import net.imadz.lifecycle.annotations.callback.PostStateChange;
+import net.imadz.lifecycle.annotations.state.Converter;
+import net.imadz.scheduling.simulation.IResource;
+import net.imadz.scheduling.simulation.Id;
+import net.imadz.scheduling.simulation.lifecycle.IResourceLifecycle;
 
 @LifecycleMeta(IResourceLifecycle.class)
 public class TruckResource implements IResource, IResourceLifecycle.Conditions.HistoryState {

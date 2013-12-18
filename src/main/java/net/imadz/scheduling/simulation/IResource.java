@@ -1,7 +1,7 @@
-package net.madz.scheduling.simulation;
+package net.imadz.scheduling.simulation;
 
-import net.madz.lifecycle.annotations.Transition;
-import net.madz.scheduling.simulation.lifecycle.IResourceLifecycle;
+import net.imadz.lifecycle.annotations.Transition;
+import net.imadz.scheduling.simulation.lifecycle.IResourceLifecycle;
 
 public interface IResource {
 

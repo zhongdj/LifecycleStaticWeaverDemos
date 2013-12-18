@@ -1,7 +1,7 @@
-package net.madz.scheduling.simulation.impl;
+package net.imadz.scheduling.simulation.impl;
 
-import net.madz.lifecycle.StateConverter;
-import net.madz.scheduling.simulation.IResource.StateEnum;
+import net.imadz.lifecycle.StateConverter;
+import net.imadz.scheduling.simulation.IResource.StateEnum;
 
 public class StateEnumConverter implements StateConverter<StateEnum> {
 

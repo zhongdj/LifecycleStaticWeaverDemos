@@ -1,7 +1,8 @@
-package net.madz.scheduling.simulation.impl;
+package net.imadz.scheduling.simulation.impl;
 
 import static org.junit.Assert.assertEquals;
-import net.madz.scheduling.simulation.IResource.StateEnum;
+import net.imadz.scheduling.simulation.IResource.StateEnum;
+import net.imadz.scheduling.simulation.impl.TruckResource;
 
 import org.junit.Test;
 
