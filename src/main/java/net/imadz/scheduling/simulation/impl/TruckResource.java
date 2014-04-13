@@ -10,9 +10,11 @@ import net.imadz.lifecycle.annotations.state.Converter;
 import net.imadz.scheduling.simulation.IResource;
 import net.imadz.scheduling.simulation.Id;
 import net.imadz.scheduling.simulation.lifecycle.IResourceLifecycle;
+import net.imadz.scheduling.simulation.lifecycle.IResourceLifecycle.Transitions.*;
+import net.imadz.scheduling.simulation.lifecycle.IResourceLifecycle.Conditions.*;
 
 @LifecycleMeta(IResourceLifecycle.class)
-public class TruckResource implements IResource, IResourceLifecycle.Conditions.HistoryState {
+public class TruckResource implements IResource, HistoryState {
 
     @StateIndicator
     @Converter(StateEnumConverter.class)
@@ -29,29 +31,29 @@ public class TruckResource implements IResource, IResourceLifecycle.Conditions.H
         return state;
     }
 
-    @Transition(IResourceLifecycle.Transitions.Deploy.class)
+    @Transition(Deploy.class)
     public void doDeploy() {}
 
-    @Transition(IResourceLifecycle.Transitions.Work.class)
+    @Transition(Work.class)
     public void doWork() {}
 
-    @Transition(IResourceLifecycle.Transitions.Undeploy.class)
+    @Transition(Undeploy.class)
     public void doUndeploy() {}
 
-    @Transition(IResourceLifecycle.Transitions.Release.class)
+    @Transition(Release.class)
     public void doRelease() {}
 
-    @Transition(IResourceLifecycle.Transitions.Recover.class)
+    @Transition(Recover.class)
     public void doResume() {}
 
-    @Transition(IResourceLifecycle.Transitions.Recycle.class)
+    @Transition(Recycle.class)
     public void doRecycle() {}
 
-    @Transition(IResourceLifecycle.Transitions.Fail.class)
+    @Transition(Fail.class)
     public void doFail() {}
 
-    @Condition(IResourceLifecycle.Conditions.HistoryState.class)
-    public IResourceLifecycle.Conditions.HistoryState getHistoryState() {
+    @Condition(HistoryState.class)
+    public HistoryState getHistoryState() {
         return this;
     }
 
