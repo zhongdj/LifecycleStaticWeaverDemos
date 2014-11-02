@@ -3,15 +3,15 @@ package net.imadz.scheduling.simulation.impl;
 import net.imadz.lifecycle.LifecycleContext;
 import net.imadz.lifecycle.annotations.LifecycleMeta;
 import net.imadz.lifecycle.annotations.StateIndicator;
-import net.imadz.lifecycle.annotations.Transition;
+import net.imadz.lifecycle.annotations.Event;
 import net.imadz.lifecycle.annotations.action.Condition;
 import net.imadz.lifecycle.annotations.callback.PostStateChange;
 import net.imadz.lifecycle.annotations.state.Converter;
 import net.imadz.scheduling.simulation.IResource;
 import net.imadz.scheduling.simulation.Id;
 import net.imadz.scheduling.simulation.lifecycle.IResourceLifecycle;
-import net.imadz.scheduling.simulation.lifecycle.IResourceLifecycle.Transitions.*;
 import net.imadz.scheduling.simulation.lifecycle.IResourceLifecycle.Conditions.*;
+import net.imadz.scheduling.simulation.lifecycle.IResourceLifecycle.Events.*;
 
 @LifecycleMeta(IResourceLifecycle.class)
 public class TruckResource implements IResource, HistoryState {
@@ -31,25 +31,25 @@ public class TruckResource implements IResource, HistoryState {
         return state;
     }
 
-    @Transition(Deploy.class)
+    @Event(Deploy.class)
     public void doDeploy() {}
 
-    @Transition(Work.class)
+    @Event(Work.class)
     public void doWork() {}
 
-    @Transition(Undeploy.class)
+    @Event(Undeploy.class)
     public void doUndeploy() {}
 
-    @Transition(Release.class)
+    @Event(Release.class)
     public void doRelease() {}
 
-    @Transition(Recover.class)
+    @Event(Recover.class)
     public void doResume() {}
 
-    @Transition(Recycle.class)
+    @Event(Recycle.class)
     public void doRecycle() {}
 
-    @Transition(Fail.class)
+    @Event(Fail.class)
     public void doFail() {}
 
     @Condition(HistoryState.class)

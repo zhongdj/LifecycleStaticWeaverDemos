@@ -1,8 +1,7 @@
 package net.imadz.scheduling.simulation;
 
-import net.imadz.lifecycle.annotations.Transition;
-import net.imadz.scheduling.simulation.lifecycle.IResourceLifecycle.Transitions.*;
-
+import net.imadz.lifecycle.annotations.Event;
+import net.imadz.scheduling.simulation.lifecycle.IResourceLifecycle.Events.*;
 public interface IResource {
 
     Id getId();
@@ -19,24 +18,24 @@ public interface IResource {
         Recycled
     }
 
-    @Transition(Deploy.class)
+    @Event(Deploy.class)
     void doDeploy();
 
-    @Transition(Work.class)
+    @Event(Work.class)
     void doWork();
 
-    @Transition(Undeploy.class)
+    @Event(Undeploy.class)
     void doUndeploy();
 
-    @Transition(Release.class)
+    @Event(Release.class)
     void doRelease();
 
-    @Transition(Recover.class)
+    @Event(Recover.class)
     void doResume();
 
-    @Transition(Recycle.class)
+    @Event(Recycle.class)
     void doRecycle();
 
-    @Transition(Fail.class)
+    @Event(Fail.class)
     void doFail();
 }
