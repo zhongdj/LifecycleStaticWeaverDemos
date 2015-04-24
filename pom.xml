@@ -8,8 +8,8 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<lifecycle.version>0.9.3</lifecycle.version>
-		<lifecycle.weaver.version>0.9.0</lifecycle.weaver.version>
+		<lifecycle.version>0.9.8-SNAPSHOT</lifecycle.version>
+		<lifecycle.weaver.version>0.9.1</lifecycle.weaver.version>
 	</properties>
 
 	<build>
